@@ -1,0 +1,49 @@
+{
+  "name": "@grrr/accessible-tabs",
+  "version": "0.1.0",
+  "description": "Accessible tab enhancer, providing tablist, tab and tabpanel roles and tab switching behaviour.",
+  "keywords": [
+    "tablist",
+    "tabs",
+    "tabpanel",
+    "accessible",
+    "accessibility"
+  ],
+  "main": "index.mjs",
+  "author": "GRRR <npm@grrr.nl>",
+  "homepage": "https://github.com/grrr-amsterdam/accessible-tabs",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/grrr-amsterdam/accessible-tabs.git"
+  },
+  "dependencies": {
+    "@grrr/utils": "^2.3.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.6.4",
+    "@babel/plugin-transform-modules-commonjs": "^7.6.0",
+    "babel-jest": "^24.9.0",
+    "eslint": "^6.6.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jest": "^23.0.2",
+    "jest": "^24.9.0"
+  },
+  "scripts": {
+    "test": "jest --passWithNoTests",
+    "lint": "eslint . --ext=.js,.mjs"
+  },
+  "jest": {
+    "transformIgnorePatterns": [
+      "//node_modules/(?!.*.*/.*.mjs)/"
+    ],
+    "transform": {
+      "^.+\\.m?js$": "babel-jest"
+    },
+    "moduleFileExtensions": [
+      "js",
+      "mjs"
+    ]
+  }
+}
