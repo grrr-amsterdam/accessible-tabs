@@ -24,8 +24,8 @@
     "no-console": ["error", {
       "allow": ["warn", "error"],
     }],
-    "no-param-reassign": "off",
     "no-nested-ternary": "off",
+    "no-param-reassign": "off",
     "no-script-url": "off",
     "no-unused-vars": ["error", { "args": "none" }],
     "object-curly-newline": "off",
