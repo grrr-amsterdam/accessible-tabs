@@ -1,0 +1,15 @@
+language: node_js
+node_js:
+- '12'
+cache:
+  yarn: true
+script:
+- yarn lint
+- yarn test
+before_install:
+- npm install -g yarn
+- yarn install
+notifications:
+  email: false
+  slack:
+    secure: tOTSa4EVSySySnf3RLmzqKIX6uRVsYNyN+csHewvRZgantpdCWY8Z0JpxWWdFSV4aMUXzehItmNwOZsdlaelir80TdNjqawNyXVcxLLYjgNMuJVXorn3ge9YM6pgbEFaXc4JktmF8BkGGlRKolJZdg5xDV/TG5Qzg2KkZJrMLWA3KGKSVq5zU8a1yOpZA7Amn+YVupZd1Pot1XLqSBn5mDlBwTJSz1Fvf0u0/4JKxJHUa0312fJymRFNF+kqohO/dWqeDP2sDqmz9nS0LoZ4FyP0bg4z9GaSA+5bdd/RKi8DrzZ58eHbKbBKRJ+8uZ7cTMKNuflt5G4W5ktydJGjBJqMwtFsPcM8oD8RnXXhUXGeJUWDGIVREDSSYMjwJPIoliVBmtcGNGNbAdK4qMoIdRT17dUtCq8hNIswvPltduosPuIl5ybcIWCUX3AfR/jbEihLla8Qc4FXzaS1HW/nfh1CKQxZHMHSP56iQACS88PZ+NigXvgC58al5c/btmHq8M2mmM47tCPQLxpAnM75sEbur12e1ooFUoYnDStpyZJCaA+HqqQMxggTf6au72nUD8rHZwQToYKXgg4F7sr4RUfUAW8i+wIMdPEY2c74NKYUufTwS59KTByt4g7OXootCuYBCBohZs/DXd68UFOKxaHT8IdPRfCQhbY5pKwZOyw=
