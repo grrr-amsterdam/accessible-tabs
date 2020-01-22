@@ -6,7 +6,7 @@ describe('Tabs', () => {
     document.body.innerHTML = `
       <ul>
         <li>
-          <a href="#section1">Section 1</a>
+          <a href="#section1" id="section1-custom-tab-id">Section 1</a>
         </li>
         <li>
           <a href="#section2">Section 2</a>
@@ -60,6 +60,15 @@ describe('Tabs', () => {
     const sections = [...document.querySelectorAll('section')];
     expect(sections[0].hidden).toEqual(false);
     expect(sections[1].hidden).toEqual(true);
+  });
+
+  test('Should leave existing tab IDs intact.', () => {
+    const tabModule = Tabs(document.querySelector('ul'));
+    tabModule.init();
+
+    const tabs = [...document.querySelectorAll('[role="tab"]')];
+    expect(tabs[0].id).toEqual('section1-custom-tab-id');
+    expect(tabs[1].id).toEqual('section2-tab');
   });
 
 });
