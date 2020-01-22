@@ -104,7 +104,7 @@ const Tabs = tablist => {
       // Add `tabpanel` semantics and initial state to sections.
       panel.setAttribute('role', 'tabpanel');
       panel.setAttribute('tabindex', '-1');
-      panel.setAttribute('aria-labelledby', `${panel.id}-tab`);
+      panel.setAttribute('aria-labelledby', tab.getAttribute('id'));
       panel.hidden = index !== 0;
 
     });
