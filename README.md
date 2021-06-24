@@ -20,14 +20,23 @@ Note: depending on your setup [additional configuration might be needed](https:/
 
 ## Usage
 
-Import the module and initialize it:
+Import the module, construct and initialize it. The tabs constructor accepts an options object as secondary argument. See the [Markup](#Markup) section below for the specific DOM it expects.
 
 ```js
 import Tabs from '@grrr/accessible-tabs';
 
-// Construct and initialize the module with the list to enhance (see 'Markup' section below).
-const tabs = Tabs(document.querySelector('.js-tablist'));
+const tabs = Tabs(document.querySelector('.js-tablist'), { /* options */ });
 tabs.init();
+```
+
+### Options
+
+Options will fall back to their defaults, which are listed here:
+
+```js
+{
+    selectedTab: 0, // Zero-based index for the initially selected tab.
+}
 ```
 
 ### Markup
