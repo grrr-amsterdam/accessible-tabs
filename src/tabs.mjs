@@ -1,4 +1,4 @@
-const Tabs = tablist => {
+const Tabs = (tablist, { selectedTab = 0 } = {}) => {
 
   /**
    * Array with tabs and corresponding panels for easy access.
@@ -95,8 +95,8 @@ const Tabs = tablist => {
       // Add `tab` semantics and initial state to anchors.
       tab.setAttribute('role', 'tab');
       tab.parentNode.setAttribute('role', 'presentation');
-      tab.setAttribute('tabindex', index === 0 ? '' : '-1');
-      tab.setAttribute('aria-selected', index === 0);
+      tab.setAttribute('tabindex', index === selectedTab ? '' : '-1');
+      tab.setAttribute('aria-selected', index === selectedTab);
       if (!tab.getAttribute('id')) {
         tab.setAttribute('id', `${panel.id}-tab`);
       }
@@ -105,7 +105,7 @@ const Tabs = tablist => {
       panel.setAttribute('role', 'tabpanel');
       panel.setAttribute('tabindex', '-1');
       panel.setAttribute('aria-labelledby', tab.getAttribute('id'));
-      panel.hidden = index !== 0;
+      panel.hidden = index !== selectedTab;
 
     });
 
