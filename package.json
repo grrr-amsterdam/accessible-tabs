@@ -20,12 +20,12 @@
   "devDependencies": {
     "@babel/core": "^7.6.4",
     "@babel/plugin-transform-modules-commonjs": "^7.6.0",
-    "babel-jest": "^24.9.0",
-    "eslint": "^6.6.0",
+    "babel-jest": "^27.0.5",
+    "eslint": "^7.29.0",
     "eslint-config-airbnb-base": "^14.0.0",
     "eslint-plugin-import": "^2.14.0",
-    "eslint-plugin-jest": "^23.0.2",
-    "jest": "^24.9.0"
+    "eslint-plugin-jest": "^24.3.6",
+    "jest": "^27.0.5"
   },
   "scripts": {
     "test": "jest",
@@ -38,6 +38,7 @@
     "moduleFileExtensions": [
       "js",
       "mjs"
-    ]
+    ],
+    "testEnvironment": "jsdom"
   }
 }
