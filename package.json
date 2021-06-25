@@ -1,6 +1,6 @@
 {
   "name": "@grrr/accessible-tabs",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Accessible tabs enhancer, providing tablist, tab and tabpanel roles and spec-compliant tab switching behaviour.",
   "keywords": [
     "tablist",
